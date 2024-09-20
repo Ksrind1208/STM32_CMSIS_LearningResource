@@ -11,7 +11,7 @@ int main(void ){
 	GPIOC->CRH&=0xFF0FFFFF;
 	
 	GPIOB->CRH|=0x00080000;
-	//GPIOB->ODR|=1<<12; // this line to set input pull-up mode by set ODR bit 1 respectively
+	GPIOB->ODR|=1<<12; // this line to set input pull-up mode by set ODR bit 1 respectively
 	GPIOC->CRH|=0x00100000;
 	while(1){
 		if(GPIOB->IDR & 0x1000){
