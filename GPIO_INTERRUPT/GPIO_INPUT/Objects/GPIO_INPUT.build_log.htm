@@ -16,51 +16,24 @@ Linker/Locator:  ArmLink.exe V6.22
 Library Manager: ArmAr.exe V6.22
 Hex Converter:   FromElf.exe V6.22
 CPU DLL:         SARMCM3.DLL V5.40.0.3
-Dialog DLL:      DCM.DLL V1.17.5.0
+Dialog DLL:      DARMSTM.DLL V1.69.1.0
 Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.3.0.0
 Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
-D:\Documents\File_code\STM32\STM32_CMSIS\GPIO_LIB\GPIO_LIB.uvprojx
-Project File Date:  09/20/2024
+D:\Documents\File_code\STM32\STM32_CMSIS\GPIO_INPUT\GPIO_INPUT.uvprojx
+Project File Date:  09/19/2024
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.22', folder: 'C:\Users\minhd\AppData\Local\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Target 1'
-gp_drive.c(18): warning: variable 'CR' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
-   18 |         }else if(port==3){
-      |                  ^~~~~~~
-gp_drive.c(23): note: uninitialized use occurs here
-   23 |         *CR&=~(0xf <<(tPIN*4)); //reset target pin
-      |          ^~
-gp_drive.c(18): note: remove the 'if' if its condition is always true
-   18 |         }else if(port==3){
-      |               ^~~~~~~~~~~
-gp_drive.c(4): note: initialize the variable 'CR' to silence this warning
-    4 |         volatile unsigned long *CR;
-      |                                   ^
-      |                                    = 0
-gp_drive.c(36): warning: variable 'IDR' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
-   36 |         }else if(port==3){
-      |                  ^~~~~~~
-gp_drive.c(39): note: uninitialized use occurs here
-   39 |         state= ((*IDR) & 1<<(pin))>>pin;
-      |                   ^~~
-gp_drive.c(36): note: remove the 'if' if its condition is always true
-   36 |         }else if(port==3){
-      |               ^~~~~~~~~~~
-gp_drive.c(28): note: initialize the variable 'IDR' to silence this warning
-   28 |         volatile unsigned long *IDR;
-      |                                    ^
-      |                                     = 0
-2 warnings generated.
-compiling gp_drive.c...
-assembling startup_stm32f10x_md.s...
 compiling main.c...
+assembling startup_stm32f10x_md.s...
 compiling system_stm32f10x.c...
 linking...
-Program Size: Code=1400 RO-data=252 RW-data=0 ZI-data=1632  
-".\Objects\GPIO_LIB.axf" - 0 Error(s), 2 Warning(s).
+Program Size: Code=928 RO-data=252 RW-data=0 ZI-data=1640  
+FromELF: creating hex file...
+".\Objects\GPIO_INPUT.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -87,10 +60,10 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE@6.1.0
 
    * Component: Keil::Device:Startup@1.0.0
+      Source file:   Device/Source/system_stm32f10x.c
       Include file:  RTE_Driver/Config/RTE_Device.h
       Source file:   Device/Source/ARM/STM32F1xx_OPT.s
       Source file:   Device/Source/ARM/startup_stm32f10x_md.s
-      Source file:   Device/Source/system_stm32f10x.c
 Build Time Elapsed:  00:00:00
 </pre>
 </body>
